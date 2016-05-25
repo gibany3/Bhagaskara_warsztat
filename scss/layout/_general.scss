@@ -1,0 +1,606 @@
+html {
+    font-size: 10px;
+    @include breakpoint(large-mobile) {
+        font-size: 12px;
+    }
+}
+body {
+    font-family: $primaryFont;
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 300;
+}
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.main-nav {
+    background: $primaryColor;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    @include breakpoint(tablet) {
+        display: none;
+    }
+    .nav-trigger {
+        background-image: url("../images/th-menu.svg");
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        width: 44px;
+        height: 44px;
+    }
+}
+.hide {
+    display: none;
+    @include breakpoint(tablet) {
+        display: block;
+    }
+}
+.menu {
+    font-size: 1.5rem;
+    background-color: rgba(159, 69, 155, 0.65);
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    @include breakpoint(tablet) {
+        // position: static;
+        // background: none;
+        display: none;
+    }
+    ul {
+        color: #fff;
+        padding: 0;
+        text-align: center;
+        li {
+            font-size: 2.5rem;
+            margin-top: 5px;
+            // @include breakpoint(tablet) {
+            //     background: url('../images/tabletImg/borderIco.svg') no-repeat;
+            //     background-position: center;
+            //     display: inline-block;
+            //     &:first-of-type {
+            //         display: none;
+            //     }
+            //     a {
+            //         width: 171px;
+            //         height: 185px;
+            //         display: block;
+            //         box-sizing: border-box;
+            //         padding-top: 110px;
+            //         margin: 10px 40px;
+            //     }
+            // }
+        }
+    }
+}
+// @include breakpoint(tablet) {
+//     .navAbout a {
+//         background: url('../images/tabletImg/settings.svg') no-repeat 50% 40px;
+//         font-size: 1.5rem;
+//         text-transform: uppercase;
+//     }
+//     .navTeam a {
+//         background: url('../images/tabletImg/user.svg') no-repeat 50% 40px;
+//     }
+//     .navServices a {
+//         background: url('../images/tabletImg/bubble.svg') no-repeat 50% 40px;
+//     }
+//     .navPortfolio a {
+//         background: url('../images/tabletImg/photo.svg') no-repeat 50% 40px;
+//     }
+//     .navBlog a {
+//         background: url('../images/tabletImg/paperplane.svg') no-repeat 50% 40px;
+//     }
+//     .navContact a {
+//         background: url('../images/tabletImg/settings.svg') no-repeat 50% 40px;
+//     }
+// }
+.bg {
+    background-image: url("../images/top.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 50px);
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    padding: 80px 5px;
+    transition: min-height 999s;
+    @include breakpoint(tablet) {
+        height: 100vh;
+    }
+    h1 {
+        font-size: 6rem;
+        margin: 0;
+        font-family: $secondaryFont;
+        font-weight: 300;
+    }
+    span {
+        color: $primaryColor;
+    }
+    p {
+        font-size: 1.9rem;
+        &:first-of-type {
+            font-size: 2.7rem;
+            margin: 35px 0;
+        }
+    }
+}
+.menuScreen {
+    min-height: 70px;
+    display: none;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    @include breakpoint(tablet) {
+        display: flex;
+        padding: 10px 15px;
+    }
+    h2 {
+        font-size: 3rem;
+        margin: 0;
+        font-family: $secondaryFont;
+        font-weight: 300;
+    }
+    span {
+        color: $primaryColor;
+    }
+    ul {
+        display: inline-block;
+        margin: 15px 0 10px;
+        li {
+            display: inline-block;
+            margin: 0 5px;
+            text-transform: uppercase;
+            a {
+                color: #676767;
+                font-weight: 400;
+                &:hover {
+                  color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+.icons {
+    background-color: $secondaryColor;
+}
+.iconSection {
+    padding: 15px;
+    @include breakpoint(tablet) {
+        min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 15px;
+    }
+    div {
+        @include breakpoint(tablet) {
+            display: block;
+            margin: 30px 10px;
+        }
+    }
+    img {
+        min-width: 70px;
+        max-width: 110px;
+        height: auto;
+        @include breakpoint(tablet) {
+            display: inline-block;
+        }
+    }
+    section {
+        // min-height: 25vh;
+        transition: min-height 999999s;
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        box-sizing: border-box;
+        @include breakpoint(tablet) {
+            display: block;
+            text-align: center;
+            flex: 0 0 50%;
+        }
+        @include breakpoint(desktop) {
+            flex: 0 0 25%;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 0;
+            &:first-child {
+                font-size: 2.2rem;
+            }
+        }
+    }
+    .leftSection {
+        img {
+            margin-right: 10px;
+        }
+    }
+    .rightSection {
+        flex-direction: row-reverse;
+        text-align: right;
+        @include breakpoint(tablet) {
+            text-align: center;
+        }
+        img {
+            margin-left: 10px;
+        }
+    }
+}
+.sectionHeader {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    h2 {
+        font-weight: 400;
+        padding: 0 15px;
+    }
+    &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid $primaryColor;
+        border-bottom: 1px solid $primaryColor;
+        align-self: flex-end;
+    }
+    &:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid $primaryColor;
+        border-top: 1px solid $primaryColor;
+        align-self: flex-start;
+    }
+    span {
+        color: $primaryColor;
+    }
+}
+.aboutUs {
+    padding: 15px;
+    font-weight: 300;
+    .contentWrapper {
+        text-align: center;
+        @include breakpoint(tablet) {
+            width: 85%;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            max-width: 287px;
+            height: auto;
+            @include breakpoint(tablet) {
+                display: inline-block;
+            }
+        }
+        p {
+            font-size: 1.5rem;
+            @include breakpoint(tablet) {
+                text-align: inherit;
+                display: inline-block;
+                width: 316px;
+                margin: 0 10px;
+                vertical-align: top;
+                text-align: left;
+            }
+        }
+        a {
+            background-color: $primaryColor;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px auto;
+            width: 100px;
+            height: 20px;
+            @include breakpoint(tablet) {
+                display: inline-block;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.bg2 {
+    background-image: url("../images/middleBg.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    padding: 70px 0;
+    img {
+        width: 120px;
+        height: auto;
+    }
+    p {
+        font-size: 2rem;
+    }
+}
+.ourTeam {
+    padding: 15px 0;
+    text-align: center;
+    .navButton {
+        img {
+            height: auto;
+            width: 12%;
+            max-width: 64px;
+            min-width: 32px;
+            margin-top: 20px;
+        }
+    }
+    .employeesList {
+        li {
+            display: inline-block;
+            div.employe {
+                figure {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background-color: #938d8d;
+                    display: inline-block;
+                }
+                img {
+                    display: inline-block;
+                }
+                h3 {
+                    text-transform: uppercase;
+                }
+                img {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+.ourSkills {
+    padding: 0 20px 40px;
+    .allSkillBar {
+        max-width: 80%;
+        margin: 0 auto;
+        @include breakpoint(tablet) {
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            max-width: 960px;
+        }
+    }
+    div.skillBar {
+        @include breakpoint(tablet) {
+            flex: 0 0 50%;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+    }
+    p {
+        font-family: $secondaryFont;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 40px 0 2px;
+        span {
+            float: right;
+            font-weight: 300;
+        }
+    }
+    .ProgBar {
+        background-color: #f0f0f0;
+        width: 100%;
+        height: 5px;
+        @include breakpoint(tablet) {
+            height: 15px;
+        }
+        span {
+            background-color: $primaryColor;
+            height: 5px;
+            display: block;
+            transition: width 1s ease-in-out;
+            // transition: width 3s  cubic-bezier(.34,1.76,.68,1.79);
+            width: 0;
+            @include breakpoint(tablet) {
+                height: 15px;
+            }
+        }
+    }
+}
+.animate {
+    &.webDesign {
+        span {
+            width: 90%;
+        }
+    }
+    &.graphicDesign {
+        span {
+            width: 70%;
+        }
+    }
+    &.htmlCss {
+        span {
+            width: 75%;
+        }
+    }
+    &.uiUx {
+        span {
+            width: 85%;
+        }
+    }
+}
+.nextPart {
+    padding: 15px;
+    text-align: center;
+    & > p {
+        max-width: 60%;
+        margin: 25px auto;
+    }
+    .statistic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        p {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin: 10px 25px;
+            &::after {
+                content: "Lorem ipsum";
+                font-size: 1.5rem;
+                display: block;
+                font-weight: 300;
+            }
+        }
+    }
+    figure {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: $figureColor;
+        display: inline-block;
+    }
+    & > p:last-of-type {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+    span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $figureColor;
+        display: inline-block;
+        margin: 15px 5px;
+    }
+    .active {
+        background-color: $figureColor;
+    }
+}
+.portfolio {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    .box {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        figure {
+            margin: 0 10px 15px;
+        }
+        p {
+            font-weight: 600;
+            text-align: center;
+            margin: 0 0 10px;
+            span {
+                display: block;
+                font-weight: 300;
+                font-size: 1.5rem;
+            }
+        }
+        img {
+            width: 250px;
+            height: auto;
+        }
+    }
+    .watchBtn {
+        background-color: $primaryColor;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    p {
+        text-align: center;
+    }
+}
+.formSection {
+    padding: 0 15px;
+    text-align: center;
+    form {
+        text-align: center;
+        width: 80%;
+        max-width: 530px;
+        margin: 0 auto;
+        @include breakpoint(tablet) {
+            display: inline-block;
+            text-align: left;
+            vertical-align: top;
+        }
+        input[type=email],
+        input[type=text] {
+            width: 100%;
+            height: 30px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            padding: 20px 5px;
+            outline: none;
+            border: 1px solid $figureColor;
+            &:focus,
+            &:focus {
+                box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, .5);
+                border: 2px solid $primaryColor;
+            }
+        }
+        input[type=submit] {
+            background-color: $primaryColor;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        textarea {
+            margin: 8px 0;
+            box-sizing: border-box;
+            padding: 5px;
+            width: 100%;
+            outline: none;
+            border: 1px solid $figureColor;
+            &:focus {
+                box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, .5);
+                border: 2px solid $primaryColor;
+            }
+        }
+    }
+    h1 {
+        color: $colorFont;
+        font-weight: 400;
+        span {
+            display: inline-block;
+            color: $primaryColor;
+        }
+    }
+}
+.addressContact {
+    text-align: center;
+    @include breakpoint(tablet) {
+        width: 50%;
+        display: inline-block;
+        text-align: left;
+        margin: 10px 10px;
+    }
+    p {
+        margin: 10px auto;
+        width: 90%;
+        @include breakpoint(tablet) {
+            margin: 10px 0;
+        }
+    }
+    p:nth-of-type(2) {
+        font-weight: 500;
+    }
+    span {
+        margin-top: 10px;
+        display: block;
+    }
+    img {
+        width: 10%;
+        height: auto;
+    }
+}
