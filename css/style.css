@@ -541,18 +541,19 @@ ul {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
 }
 
 @media only screen and (min-width: 768px) {
   .menuScreen {
     display: flex;
-    padding: 10px 15px;
   }
 }
 
 .menuScreen h2 {
   font-size: 3rem;
-  margin: 0;
+  margin: 0 30px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
@@ -581,6 +582,17 @@ ul {
   color: #9f449b;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  border: 1px solid #cccccc;
+  padding: 0;
+  z-index: 999;
+}
+
 .icons {
   background-color: #eeeeee;
 }
@@ -595,14 +607,14 @@ ul {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 15px;
+    padding: 15px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .iconSection div {
     display: block;
-    margin: 30px 10px;
+    margin: 10px;
   }
 }
 
@@ -647,6 +659,7 @@ ul {
 
 .iconSection section p:first-child {
   font-size: 2.2rem;
+  margin-bottom: 15px;
 }
 
 .iconSection .leftSection img {
@@ -712,41 +725,34 @@ ul {
 
 @media only screen and (min-width: 768px) {
   .aboutUs .contentWrapper {
-    width: 85%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
   }
 }
 
 .aboutUs .contentWrapper img {
-  width: 100%;
-  max-width: 287px;
+  width: 70%;
+  max-width: 365px;
   height: auto;
 }
 
-@media only screen and (min-width: 768px) {
-  .aboutUs .contentWrapper img {
-    display: inline-block;
-  }
-}
-
 .aboutUs .contentWrapper p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 2;
 }
 
 @media only screen and (min-width: 768px) {
   .aboutUs .contentWrapper p {
-    text-align: inherit;
-    display: inline-block;
-    width: 316px;
-    margin: 0 10px;
-    vertical-align: top;
     text-align: left;
+    max-width: 500px;
+    margin-left: 15px;
   }
 }
 
 .aboutUs .contentWrapper a {
   background-color: #9f449b;
-  display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
@@ -755,12 +761,13 @@ ul {
   margin: 10px auto;
   width: 100px;
   height: 20px;
+  text-align: center;
+  line-height: normal;
 }
 
 @media only screen and (min-width: 768px) {
   .aboutUs .contentWrapper a {
-    display: inline-block;
-    margin-top: 15px;
+    margin: 0;
   }
 }
 
@@ -792,16 +799,53 @@ ul {
 .ourTeam .navButton img {
   height: auto;
   width: 12%;
-  max-width: 64px;
+  max-width: 60px;
   min-width: 32px;
-  margin-top: 20px;
+  margin: 20px 0 10px;
 }
 
-.ourTeam .employeesList li {
+.ourTeam .navButton .nextBtn,
+.ourTeam .navButton .prevBtn {
+  position: relative;
+}
+
+.ourTeam .navButton .nextBtn:active,
+.ourTeam .navButton .prevBtn:active {
+  top: 1px;
+}
+
+.ourTeam .slider {
+  width: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 0;
+  padding-bottom: 5px;
+}
+
+@media only screen and (min-width: 570px) {
+  .ourTeam .slider {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ourTeam .slider {
+    width: 750px;
+  }
+}
+
+.ourTeam .slider .employeesList {
+  position: relative;
+}
+
+.ourTeam .slider .employeesList li {
   display: inline-block;
+  width: 250px;
+  min-height: 315px;
+  vertical-align: top;
 }
 
-.ourTeam .employeesList li div.employe figure {
+.ourTeam .slider .employeesList li div.employe figure {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -809,16 +853,25 @@ ul {
   display: inline-block;
 }
 
-.ourTeam .employeesList li div.employe img {
+.ourTeam .slider .employeesList li div.employe figure img {
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  margin: 0;
+}
+
+.ourTeam .slider .employeesList li div.employe img {
   display: inline-block;
-}
-
-.ourTeam .employeesList li div.employe h3 {
-  text-transform: uppercase;
-}
-
-.ourTeam .employeesList li div.employe img {
   margin: 0 5px;
+}
+
+.ourTeam .slider .employeesList li div.employe h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.ourTeam .slider .employeesList li div.employe p {
+  font-size: 1.4rem;
 }
 
 .ourSkills {
@@ -939,6 +992,13 @@ ul {
   display: inline-block;
 }
 
+.nextPart figure img {
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  margin: 0;
+}
+
 .nextPart > p:last-of-type {
   text-transform: uppercase;
   font-weight: 400;
@@ -973,6 +1033,12 @@ ul {
   margin: 0 10px 15px;
 }
 
+@media only screen and (min-width: 768px) {
+  .portfolio .box figure {
+    flex: 0 0 24%;
+  }
+}
+
 .portfolio .box p {
   font-weight: 600;
   text-align: center;
@@ -986,8 +1052,14 @@ ul {
 }
 
 .portfolio .box img {
-  width: 250px;
+  max-width: 250px;
   height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio .box img {
+    max-width: 330px;
+  }
 }
 
 .portfolio .watchBtn {
@@ -1012,7 +1084,7 @@ ul {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
   .formSection form {
     display: inline-block;
     text-align: left;
@@ -1075,12 +1147,12 @@ ul {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
   .addressContact {
     width: 50%;
     display: inline-block;
     text-align: left;
-    margin: 10px 10px;
+    margin: 10px;
   }
 }
 
@@ -1089,7 +1161,7 @@ ul {
   width: 90%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
   .addressContact p {
     margin: 10px 0;
   }

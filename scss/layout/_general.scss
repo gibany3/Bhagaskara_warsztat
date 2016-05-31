@@ -56,8 +56,6 @@ ul {
     width: 100%;
     left: 0;
     @include breakpoint(tablet) {
-        // position: static;
-        // background: none;
         display: none;
     }
     ul {
@@ -67,47 +65,9 @@ ul {
         li {
             font-size: 2.5rem;
             margin-top: 5px;
-            // @include breakpoint(tablet) {
-            //     background: url('../images/tabletImg/borderIco.svg') no-repeat;
-            //     background-position: center;
-            //     display: inline-block;
-            //     &:first-of-type {
-            //         display: none;
-            //     }
-            //     a {
-            //         width: 171px;
-            //         height: 185px;
-            //         display: block;
-            //         box-sizing: border-box;
-            //         padding-top: 110px;
-            //         margin: 10px 40px;
-            //     }
-            // }
         }
     }
 }
-// @include breakpoint(tablet) {
-//     .navAbout a {
-//         background: url('../images/tabletImg/settings.svg') no-repeat 50% 40px;
-//         font-size: 1.5rem;
-//         text-transform: uppercase;
-//     }
-//     .navTeam a {
-//         background: url('../images/tabletImg/user.svg') no-repeat 50% 40px;
-//     }
-//     .navServices a {
-//         background: url('../images/tabletImg/bubble.svg') no-repeat 50% 40px;
-//     }
-//     .navPortfolio a {
-//         background: url('../images/tabletImg/photo.svg') no-repeat 50% 40px;
-//     }
-//     .navBlog a {
-//         background: url('../images/tabletImg/paperplane.svg') no-repeat 50% 40px;
-//     }
-//     .navContact a {
-//         background: url('../images/tabletImg/settings.svg') no-repeat 50% 40px;
-//     }
-// }
 .bg {
     background-image: url("../images/top.jpg");
     background-size: cover;
@@ -144,13 +104,14 @@ ul {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #fff;
+    padding: 10px 15px;
     @include breakpoint(tablet) {
         display: flex;
-        padding: 10px 15px;
     }
     h2 {
         font-size: 3rem;
-        margin: 0;
+        margin: 0 30px;
         font-family: $secondaryFont;
         font-weight: 300;
     }
@@ -168,11 +129,21 @@ ul {
                 color: #676767;
                 font-weight: 400;
                 &:hover {
-                  color: $primaryColor;
+                    color: $primaryColor;
                 }
             }
         }
     }
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    border: 1px solid #cccccc;
+    padding: 0;
+    z-index: 999;
 }
 .icons {
     background-color: $secondaryColor;
@@ -184,12 +155,12 @@ ul {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        padding: 0 15px;
+        padding: 15px;
     }
     div {
         @include breakpoint(tablet) {
             display: block;
-            margin: 30px 10px;
+            margin: 10px;
         }
     }
     img {
@@ -220,6 +191,7 @@ ul {
             margin: 0;
             &:first-child {
                 font-size: 2.2rem;
+                margin-bottom: 15px;
             }
         }
     }
@@ -273,31 +245,28 @@ ul {
     .contentWrapper {
         text-align: center;
         @include breakpoint(tablet) {
-            width: 85%;
-            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 70px;
         }
         img {
-            width: 100%;
-            max-width: 287px;
+            width: 70%;
+            max-width: 365px;
             height: auto;
-            @include breakpoint(tablet) {
-                display: inline-block;
-            }
+            @include breakpoint(tablet) {}
         }
         p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            line-height: 2;
             @include breakpoint(tablet) {
-                text-align: inherit;
-                display: inline-block;
-                width: 316px;
-                margin: 0 10px;
-                vertical-align: top;
                 text-align: left;
+                max-width: 500px;
+                margin-left: 15px;
             }
         }
         a {
             background-color: $primaryColor;
-            display: inline-block;
             padding: 10px 20px;
             border-radius: 5px;
             color: #fff;
@@ -306,9 +275,10 @@ ul {
             margin: 10px auto;
             width: 100px;
             height: 20px;
+            text-align: center;
+            line-height: normal;
             @include breakpoint(tablet) {
-                display: inline-block;
-                margin-top: 15px;
+                margin: 0;
             }
         }
     }
@@ -337,30 +307,62 @@ ul {
         img {
             height: auto;
             width: 12%;
-            max-width: 64px;
+            max-width: 60px;
             min-width: 32px;
-            margin-top: 20px;
+            margin: 20px 0 10px;
+        }
+        .nextBtn,
+        .prevBtn {
+            position: relative;
+            &:active {
+                top: 1px;
+            }
         }
     }
-    .employeesList {
-        li {
-            display: inline-block;
-            div.employe {
-                figure {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
-                    background-color: #938d8d;
-                    display: inline-block;
-                }
-                img {
-                    display: inline-block;
-                }
-                h3 {
-                    text-transform: uppercase;
-                }
-                img {
-                    margin: 0 5px;
+    .slider {
+        width: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+        font-size: 0;
+        padding-bottom: 5px;
+        @include breakpoint(large-mobile) {
+          width: 500px;
+        }
+        @include breakpoint(tablet) {
+          width: 750px;
+        }
+        .employeesList {
+            position: relative;
+            li {
+                display: inline-block;
+                width: 250px;
+                min-height: 315px;
+                vertical-align: top;
+                div.employe {
+                    figure {
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        background-color: #938d8d;
+                        display: inline-block;
+                        img {
+                            border-radius: 50%;
+                            width: inherit;
+                            height: inherit;
+                            margin: 0;
+                        }
+                    }
+                    img {
+                        display: inline-block;
+                        margin: 0 5px;
+                    }
+                    h3 {
+                        text-transform: uppercase;
+                        font-size: 2rem;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
@@ -467,6 +469,12 @@ ul {
         border-radius: 50%;
         background-color: $figureColor;
         display: inline-block;
+        img {
+            border-radius: 50%;
+            width: inherit;
+            height: inherit;
+            margin: 0;
+        }
     }
     & > p:last-of-type {
         text-transform: uppercase;
@@ -494,6 +502,9 @@ ul {
         flex-wrap: wrap;
         figure {
             margin: 0 10px 15px;
+            @include breakpoint(tablet) {
+                flex: 0 0 24%;
+            }
         }
         p {
             font-weight: 600;
@@ -506,8 +517,11 @@ ul {
             }
         }
         img {
-            width: 250px;
+            max-width: 250px;
             height: auto;
+            @include breakpoint(tablet) {
+                max-width: 330px;
+            }
         }
     }
     .watchBtn {
@@ -527,7 +541,7 @@ ul {
         width: 80%;
         max-width: 530px;
         margin: 0 auto;
-        @include breakpoint(tablet) {
+        @include breakpoint(large-desktop) {
             display: inline-block;
             text-align: left;
             vertical-align: top;
@@ -579,16 +593,16 @@ ul {
 }
 .addressContact {
     text-align: center;
-    @include breakpoint(tablet) {
+    @include breakpoint(large-desktop) {
         width: 50%;
         display: inline-block;
         text-align: left;
-        margin: 10px 10px;
+        margin: 10px;
     }
     p {
         margin: 10px auto;
         width: 90%;
-        @include breakpoint(tablet) {
+        @include breakpoint(large-desktop) {
             margin: 10px 0;
         }
     }

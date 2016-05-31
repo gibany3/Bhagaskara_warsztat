@@ -1,6 +1,6 @@
 // Breakpoints
 @mixin breakpoint($breakpoint, $media: screen) {
-     @if $breakpoint == large-mobile{
+     @if $breakpoint == large-mobile {
         @media only #{$media} and (min-width: $large-mobile) {
              @content;
         }
