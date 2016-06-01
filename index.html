@@ -22,7 +22,7 @@
 
     </nav>
 
-    <div class="bg">
+    <div class="bg" id="home">
         <section class="container">
             <h1>Bhagas<span>kara</span>.</h1>
             <p>
@@ -32,15 +32,26 @@
                 Vestibulum ornare cursus nisl, fermentum tincidunt libero pretium et. Maecenas interdum ligula non fermentum fringilla.
             </p>
         </section>
+        <div class="menuIcon container">
+          <ul>
+              <li class="navAbout"><img src="images/icons/about.png" alt="" /></li>
+              <li class="navTeam"><img src="images/icons/team.png" alt="" /></li>
+              <li class="navServices"><img src="images/icons/services.png" alt="" /></li>
+              <li class="navPortfolio"><img src="images/icons/portfolio.png" alt="" /></li>
+              <li class="navBlog"><img src="images/icons/blog.png" alt="" /></li>
+              <li class="navContact"><img src="images/icons/contact.png" alt="" /></li>
+          </ul>
+        </div>
+
         <div class="menu">
             <ul class="hide">
-                <li><a href="#">Home</a></li>
-                <li class="navAbout"><a href="#about">About</a></li>
-                <li class="navTeam"><a href="#ourTeam">Team</a></li>
-                <li class="navServices"><a href="#services">Services</a></li>
-                <li class="navPortfolio"><a href="#portfolio">Portfolio</a></li>
-                <li class="navBlog"><a href="#blog">Blog</a></li>
-                <li class="navContact"><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ourTeam">Team</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -48,7 +59,7 @@
     <section class="menuScreen container">
         <h2>Bhagas<span>kara</span>.</h2>
         <ul>
-            <li class="navAbout"><a href="#">Home</a></li>
+            <li class="navAbout"><a href="#home">Home</a></li>
             <li class="navAbout"><a href="#about">About</a></li>
             <li class="navAbout"><a href="#ourTeam">Team</a></li>
             <li class="navAbout"><a href="#services">Services</a></li>
@@ -228,7 +239,7 @@
     </section>
 
     <section class="ourSkills" id="services">
-        <hr>
+        <hr class="container">
 
         <div class="sectionHeader">
             <h2>Our <span>skils</span></h2>
@@ -282,7 +293,10 @@
         </p>
     </div>
 
-    <section class="nextPart container">
+    <section class="nextPart container" id="blog">
+        <div class="sectionHeader">
+            <h2>Our <span>blog</span></h2>
+        </div>
         <div class="statistic">
             <p>365</p>
             <p>98%</p>
@@ -292,74 +306,73 @@
 
         <div class="secondSlider">
             <ul>
-              <li>
-                <figure>
-                    <img src="images/hat.jpg" alt="" />
-                </figure>
-                <p>
-                    “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
-                </p>
-                <p>
-                    Lesale Christoper, Pinterest
-                </p>
-              </li>
-              <li>
-                <figure>
-                    <img src="images/ive.jpg" alt="" />
-                </figure>
-                <p>
-                    “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
-                </p>
-                <p>
-                    Johnatan Ive, Apple
-                </p>
-              </li>
-              <li>
-                <figure>
-                    <img src="images/gates.jpg" alt="" />
-                </figure>
-                <p>
-                    “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
-                </p>
-                <p>
-                    Bill Gates, Microsoft
-                </p>
-              </li>
-              <li>
-                <figure>
-                    <img src="images/tim.jpg" alt="" />
-                </figure>
-                <p>
-                    “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
-                </p>
-                <p>
-                    Tim Cook, Apple
-                </p>
-              </li>
-              <li>
-                <figure>
-                    <img src="images/sundar.jpg" alt="" />
-                </figure>
-                <p>
-                    “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
-                </p>
-                <p>
-                    Sundar Pichai, Google
-                </p>
-              </li>
+                <li>
+                    <figure>
+                        <img src="images/hat.jpg" alt="" />
+                    </figure>
+                    <p>
+                        “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
+                    </p>
+                    <p>
+                        Lesale Christoper, Pinterest
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/ive.jpg" alt="" />
+                    </figure>
+                    <p>
+                        “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
+                    </p>
+                    <p>
+                        Johnatan Ive, Apple
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/gates.jpg" alt="" />
+                    </figure>
+                    <p>
+                        “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
+                    </p>
+                    <p>
+                        Bill Gates, Microsoft
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/tim.jpg" alt="" />
+                    </figure>
+                    <p>
+                        “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
+                    </p>
+                    <p>
+                        Tim Cook, Apple
+                    </p>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/sundar.jpg" alt="" />
+                    </figure>
+                    <p>
+                        “Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, est non commodo luctus, nisi erat ”
+                    </p>
+                    <p>
+                        Sundar Pichai, Google
+                    </p>
+                </li>
             </ul>
         </div>
-
-        <span></span>
-        <span></span>
-        <span class="active"></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <div class="circleNav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </section>
 
     <section class="portfolio container" id="portfolio">
-        <hr>
         <div class="sectionHeader">
             <h2>Our <span>portfolio</span></h2>
         </div>
@@ -412,8 +425,8 @@
     </section>
 
     <section class="formSection container">
-        <hr>
-        <div class="sectionHeader" id="contact">
+        <hr id="contact">
+        <div class="sectionHeader">
             <h2>Get <span>in touch</span></h2>
         </div>
         <form class="contactForm">
