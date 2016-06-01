@@ -461,6 +461,27 @@ ul {
   height: 44px;
 }
 
+.menuIcon ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.menuIcon ul li {
+  background-image: url("../images/icons/border.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 5px;
+  padding: 15px 30px;
+}
+
+.menuIcon ul li img {
+  height: auto;
+  width: 40px;
+}
+
 .hide {
   display: none;
 }
@@ -984,7 +1005,47 @@ ul {
   font-weight: 300;
 }
 
-.nextPart figure {
+.nextPart .secondSlider {
+  width: 250px;
+  overflow: hidden;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+@media only screen and (min-width: 570px) {
+  .nextPart .secondSlider {
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nextPart .secondSlider {
+    width: 650px;
+  }
+}
+
+.nextPart .secondSlider ul {
+  position: relative;
+}
+
+.nextPart .secondSlider ul li {
+  display: inline-block;
+  width: 250px;
+}
+
+@media only screen and (min-width: 570px) {
+  .nextPart .secondSlider ul li {
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nextPart .secondSlider ul li {
+    width: 650px;
+  }
+}
+
+.nextPart .secondSlider ul li figure {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -992,20 +1053,24 @@ ul {
   display: inline-block;
 }
 
-.nextPart figure img {
+.nextPart .secondSlider ul li figure img {
   border-radius: 50%;
   width: inherit;
   height: inherit;
   margin: 0;
 }
 
-.nextPart > p:last-of-type {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.2rem;
+.nextPart .secondSlider ul li p {
+  font-size: 1.5rem;
 }
 
-.nextPart span {
+.nextPart .secondSlider ul li p:last-of-type {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.nextPart .circleNav span {
   width: 20px;
   height: 20px;
   border-radius: 50%;

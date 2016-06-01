@@ -42,6 +42,26 @@ ul {
         height: 44px;
     }
 }
+.menuIcon {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    li {
+      background-image:url('../images/icons/border.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 5px;
+      padding: 15px 30px;
+      img {
+        height: auto;
+        width: 40px;
+      }
+    }
+  }
+}
 .hide {
     display: none;
     @include breakpoint(tablet) {
@@ -326,10 +346,10 @@ ul {
         font-size: 0;
         padding-bottom: 5px;
         @include breakpoint(large-mobile) {
-          width: 500px;
+            width: 500px;
         }
         @include breakpoint(tablet) {
-          width: 750px;
+            width: 750px;
         }
         .employeesList {
             position: relative;
@@ -463,31 +483,61 @@ ul {
             }
         }
     }
-    figure {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: $figureColor;
-        display: inline-block;
-        img {
-            border-radius: 50%;
-            width: inherit;
-            height: inherit;
-            margin: 0;
+    .secondSlider {
+        width: 250px;
+        overflow: hidden;
+        margin: 0 auto;
+        font-size: 0;
+        @include breakpoint(large-mobile) {
+            width: 450px;
+        }
+        @include breakpoint(tablet) {
+            width: 650px;
+        }
+        ul {
+            position: relative;
+            li {
+                display: inline-block;
+                width: 250px;
+                @include breakpoint(large-mobile) {
+                    width: 450px;
+                }
+                @include breakpoint(tablet) {
+                    width: 650px;
+                }
+                figure {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background-color: $figureColor;
+                    display: inline-block;
+                    img {
+                        border-radius: 50%;
+                        width: inherit;
+                        height: inherit;
+                        margin: 0;
+                    }
+                }
+                p {
+                  font-size: 1.5rem;
+                  &:last-of-type {
+                      text-transform: uppercase;
+                      font-weight: 400;
+                      font-size: 1.5rem;
+                  }
+                }
+            }
         }
     }
-    & > p:last-of-type {
-        text-transform: uppercase;
-        font-weight: 400;
-        font-size: 1.2rem;
-    }
-    span {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 1px solid $figureColor;
-        display: inline-block;
-        margin: 15px 5px;
+    .circleNav {
+      span {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 1px solid $figureColor;
+          display: inline-block;
+          margin: 15px 5px;
+      }
     }
     .active {
         background-color: $figureColor;
