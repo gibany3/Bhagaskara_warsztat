@@ -461,6 +461,7 @@ ul {
   height: 44px;
 }
 
+<<<<<<< HEAD
 .bg {
   background-image: url("../images/top.jpg");
   background-size: cover;
@@ -511,17 +512,25 @@ ul {
 }
 
 .bg .menuIcon ul {
+=======
+.menuIcon ul {
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
 }
 
+<<<<<<< HEAD
 .bg .menuIcon ul li {
+=======
+.menuIcon ul li {
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
   background-image: url("../images/icons/border.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+<<<<<<< HEAD
   padding: 10px 6px;
   box-sizing: border-box;
 }
@@ -559,6 +568,18 @@ ul {
   background: url("../images/borderSm.png") center no-repeat/cover;
   width: 65px;
   height: 70px;
+=======
+  margin: 5px;
+  padding: 15px 30px;
+}
+
+.menuIcon ul li img {
+  height: auto;
+  width: 40px;
+}
+
+.hide {
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
   display: none;
   margin: 0 auto;
 }
