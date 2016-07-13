@@ -19,7 +19,7 @@ $(document).ready(function() {
     //progress Bar
     var ourSkills = $('.ourSkills');
 
-    var stickyMenu = $(".menuScreen");
+    var stickyMenu = $(".stickyMenu");
     var shortDescSection = $(".iconSection");
     var stickyMenuTrigger = shortDescSection.offset().top - stickyMenu.outerHeight();
 
@@ -37,9 +37,13 @@ $(document).ready(function() {
 
         //Sticky menu
         if ($(window).scrollTop() > stickyMenuTrigger) {
-            stickyMenu.addClass("sticky");
+            // stickyMenu.fadeIn();
+            stickyMenu.addClass("visibility");
+            stickyMenu.removeClass("hide");
         } else {
-            stickyMenu.removeClass("sticky");
+            // stickyMenu.fadeOut();
+            stickyMenu.removeClass("visibility");
+            stickyMenu.addClass("hide");
         };
     });
 
@@ -88,10 +92,6 @@ $(document).ready(function() {
 
         sliderTwo.width(widthImageSliderTwo * imagesSliderTwo.length);
 
-        // sliderTwo.css("left", -(currentClickedElement * widthImageSliderTwo));
-
-        allSpan.eq(0).addClass('active');
-
         allSpan.off('click').on("click", function() {
 
             var currIndex = allSpan.index($(this));
@@ -107,11 +107,14 @@ $(document).ready(function() {
         });
     };
 
-//Scroll menu
+    //Scroll menu
 
-var menuItem = $('.menuScreen').find('li').find('a');
+    var menuItem = $('.stickyMenu').find('li').find('a');
+    var menuItem2 = $('.menuIcon').find('a');
+    var menuItem3 = $('.menu').find('li').find('a');
 
-    menuItem.click(function(event) {
+
+    menuItem.add(menuItem2).add(menuItem3).click(function(event) {
         event.preventDefault();
         var scrollToEl = $(this).attr('href');
 
