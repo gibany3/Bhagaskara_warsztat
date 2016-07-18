@@ -1,18 +1,25 @@
 {
-  "name": "project",
+  "name": "name",
   "version": "1.0.0",
-  "description": "test2",
+  "description": "Sample project",
   "main": "index.js",
   "scripts": {
-    "test": "test2"
+    "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gibany3"
+    "url": "http://github.com"
   },
   "keywords": [
-    "project_test"
+    "test"
   ],
-  "author": "Michal",
-  "license": "ISC"
+  "author": "Mateusz",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "browser-sync": "^2.12.8",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "devDependencies": {}
 }
