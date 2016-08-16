@@ -95,15 +95,7 @@ $(document).ready(function() {
         var allSpan = $('.circleNav').find('span');
 
         sliderTwo.width(widthImageSliderTwo * imagesSliderTwo.length);
-<<<<<<< HEAD
 
-=======
-
-        // sliderTwo.css("left", -(currentClickedElement * widthImageSliderTwo));
-
-        allSpan.eq(0).addClass('active');
-
->>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
         allSpan.off('click').on("click", function() {
 
             var currIndex = allSpan.index($(this));
@@ -119,7 +111,6 @@ $(document).ready(function() {
         });
     };
 
-<<<<<<< HEAD
     //Scroll menu
 
     var menuItem = $('.stickyMenu').find('li').find('a');
@@ -128,13 +119,6 @@ $(document).ready(function() {
 
 
     menuItem.add(menuItem2).add(menuItem3).click(function(event) {
-=======
-//Scroll menu
-
-var menuItem = $('.menuScreen').find('li').find('a');
-
-    menuItem.click(function(event) {
->>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
         event.preventDefault();
         var scrollToEl = $(this).attr('href');
 
