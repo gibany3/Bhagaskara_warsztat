@@ -36,7 +36,6 @@ header,
 main,
 menu,
 nav,
-section,
 summary {
   /* 1 */
   display: block;
@@ -611,6 +610,46 @@ ul {
   display: none;
 }
 
+section.stickyMenu {
+  display: none;
+  min-height: 70px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fff;
+}
+
+section.stickyMenu h2 {
+  font-size: 3rem;
+  margin: 0 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+section.stickyMenu span {
+  color: #9f449b;
+}
+
+section.stickyMenu ul {
+  display: inline-block;
+  margin: 15px 0 10px;
+}
+
+section.stickyMenu ul li {
+  display: inline-block;
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+section.stickyMenu ul li a {
+  color: #676767;
+  font-weight: 400;
+}
+
+section.stickyMenu ul li a:hover {
+  color: #9f449b;
+}
+
 .visibility {
   position: fixed;
   top: 0;
@@ -620,51 +659,6 @@ ul {
   border: 1px solid #cccccc;
   padding: 0;
   z-index: 999;
-}
-
-@media only screen and (min-width: 768px) {
-  .visibility {
-    display: flex;
-  }
-}
-
-.stickyMenu {
-  min-height: 70px;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #fff;
-}
-
-.stickyMenu h2 {
-  font-size: 3rem;
-  margin: 0 30px;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-}
-
-.stickyMenu span {
-  color: #9f449b;
-}
-
-.stickyMenu ul {
-  display: inline-block;
-  margin: 15px 0 10px;
-}
-
-.stickyMenu ul li {
-  display: inline-block;
-  margin: 0 5px;
-  text-transform: uppercase;
-}
-
-.stickyMenu ul li a {
-  color: #676767;
-  font-weight: 400;
-}
-
-.stickyMenu ul li a:hover {
-  color: #9f449b;
 }
 
 .icons {

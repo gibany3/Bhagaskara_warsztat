@@ -90,15 +90,15 @@ ul {
                 padding: 10px 6px;
                 box-sizing: border-box;
                 .topMarg {
-                  margin-top: 100px;
+                    margin-top: 100px;
                 }
                 a {
-                  display: block;
-                  width: 105px;
-                  height: 115px;
+                    display: block;
+                    width: 105px;
+                    height: 115px;
                 }
                 &:hover {
-                  background-image: url('../images/icons/backgr.png');
+                    background-image: url('../images/icons/backgr.png');
                 }
                 img {
                     height: auto;
@@ -106,33 +106,33 @@ ul {
                     margin-top: 25px;
                 }
                 p {
-                  margin: 0;
-                  font-size: 1.5rem;
+                    margin: 0;
+                    font-size: 1.5rem;
                 }
             }
             .topMarg {
-              margin-top: 150px;
+                margin-top: 150px;
             }
         }
     }
     .downArrow {
-      background: url('../images/borderSm.png') center no-repeat /cover;
-      width: 65px;
-      height: 70px;
-      display: none;
-      margin: 0 auto;
-      @include breakpoint(tablet) {
-          display: block;
-      }
-      &:hover {
-        background-image: url('../images/borderSmCol.png');
-      }
-      a {
-        padding: 15px;
-        img {
-          margin-top: 30px;
+        background: url('../images/borderSm.png') center no-repeat /cover;
+        width: 65px;
+        height: 70px;
+        display: none;
+        margin: 0 auto;
+        @include breakpoint(tablet) {
+            display: block;
         }
-      }
+        &:hover {
+            background-image: url('../images/borderSmCol.png');
+        }
+        a {
+            padding: 15px;
+            img {
+                margin-top: 30px;
+            }
+        }
     }
 }
 .menu {
@@ -158,25 +158,16 @@ ul {
 .hide {
     display: none;
 }
-.visibility {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: none;
-  border: 1px solid #cccccc;
-  padding: 0;
-  z-index: 999;
-  @include breakpoint(tablet) {
-      display: flex;
-  }
-}
-.stickyMenu {
+section.stickyMenu {
+    display: none;
     min-height: 70px;
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
     background-color: #fff;
+    // @include breakpoint(tablet) {
+    //     display: flex;
+    // }
     h2 {
         font-size: 3rem;
         margin: 0 30px;
@@ -202,6 +193,16 @@ ul {
             }
         }
     }
+}
+.visibility {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    border: 1px solid #cccccc;
+    padding: 0;
+    z-index: 999;
 }
 .icons {
     background-color: $secondaryColor;
@@ -364,9 +365,9 @@ ul {
     padding: 20px 15px 30px;
     text-align: center;
     .navButton {
-      @include breakpoint(tablet) {
-        margin: 60px 0;
-      }
+        @include breakpoint(tablet) {
+            margin: 60px 0;
+        }
         img {
             height: auto;
             width: 12%;
