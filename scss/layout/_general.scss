@@ -42,6 +42,55 @@ ul {
         height: 44px;
     }
 }
+<<<<<<< HEAD
+=======
+.menuIcon {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    li {
+      background-image:url('../images/icons/border.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 5px;
+      padding: 15px 30px;
+      img {
+        height: auto;
+        width: 40px;
+      }
+    }
+  }
+}
+.hide {
+    display: none;
+    @include breakpoint(tablet) {
+        display: block;
+    }
+}
+.menu {
+    font-size: 1.5rem;
+    background-color: rgba(159, 69, 155, 0.65);
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    @include breakpoint(tablet) {
+        display: none;
+    }
+    ul {
+        color: #fff;
+        padding: 0;
+        text-align: center;
+        li {
+            font-size: 2.5rem;
+            margin-top: 5px;
+        }
+    }
+}
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
 .bg {
     background-image: url("../images/top.jpg");
     background-size: cover;
@@ -393,7 +442,10 @@ section.stickyMenu {
         }
         @include breakpoint(tablet) {
             width: 750px;
+<<<<<<< HEAD
             margin-bottom: 50px;
+=======
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
         }
         .employeesList {
             position: relative;
@@ -565,17 +617,27 @@ section.stickyMenu {
                     }
                 }
                 p {
+<<<<<<< HEAD
                     font-size: 1.5rem;
                     &:last-of-type {
                         text-transform: uppercase;
                         font-weight: 400;
                         font-size: 1.5rem;
                     }
+=======
+                  font-size: 1.5rem;
+                  &:last-of-type {
+                      text-transform: uppercase;
+                      font-weight: 400;
+                      font-size: 1.5rem;
+                  }
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
                 }
             }
         }
     }
     .circleNav {
+<<<<<<< HEAD
         span {
             width: 20px;
             height: 20px;
@@ -585,6 +647,16 @@ section.stickyMenu {
             margin: 15px 5px;
             cursor: pointer;
         }
+=======
+      span {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 1px solid $figureColor;
+          display: inline-block;
+          margin: 15px 5px;
+      }
+>>>>>>> ffa733923d37aa73d6758f206a5c41d0005c6e36
     }
     .active {
         background-color: $figureColor;
